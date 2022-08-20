@@ -15,7 +15,7 @@ let run_count = 0
 //Edit this to use just recent events instead of listing and sale
 const api_url = "https://api.helius.xyz/v0/addresses"
 const resource = "nft-events"
-const options = `api-key=4f87c21f-e412-4d7d-9cb9-28424c83508b`
+const options = `api-key=<YOUR-KEY-HERE>`
 
 const webhookClient = new WebhookClient({ url: webhook });
 
