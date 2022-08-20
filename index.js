@@ -73,12 +73,15 @@ const monitor  = async () => {
 
 const getImage = async (mint) => {
     try {
-        const url = "https://api.helius.xyz/v0/tokens/metadata?api-key=4f87c21f-e412-4d7d-9cb9-28424c83508b"
+        const url = "https://api.helius.xyz/v0/tokens/metadata?api-key=<YOUR-API-KEY-HERE>"
         const nftAddresses = [
             mint,
         ]
         const { data } = await axios.post(url, { mintAccounts: nftAddresses} )
         let image = data[0].offChainData.image
+        if (image === undefined){
+            image = ""
+        }
         return image
     }
     catch (err) {
